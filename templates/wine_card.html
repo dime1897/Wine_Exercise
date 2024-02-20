@@ -1,0 +1,48 @@
+<html>
+    <link rel="stylesheet" href="/static/wine.css">
+    <body>
+        <h1>WINE CARD</h1>
+        <ul>
+            <li>SPUMANTI:</li>
+            <ul>
+        {% for wine in spum %}
+            {% if wine['quantity']==0: %}<li><label style="background-color: lightgrey">{{wine['name']}}</label></li>{% else: %}<li><label fontsize="20px">{{wine['name']}}</label></li>{% endif %}
+                <ul>
+                    <li>QUANTITY: {{wine['quantity']}}</li>
+                    <li>PRICE: {{wine['price']}}€</li>
+                </ul>
+        {% endfor %}
+            </ul>
+            <li>BIANCHI:</li>
+            <ul>
+        {% for wine in white %}
+            {% if wine['quantity']==0: %}<li><label style="background-color: lightgrey">{{wine['name']}}</label></li>{% else: %}<li><label fontsize="20px">{{wine['name']}}</label></li>{% endif %}
+                <ul>
+                    <li>QUANTITY: {{wine['quantity']}}</li>
+                    <li>PRICE: {{wine['price']}}€</li>
+                </ul>
+        {% endfor %}
+            </ul>
+            <li>ROSSI:</li>
+            <ul>
+        {% for wine in red %}
+            {% if wine['quantity']==0: %}<li><label style="background-color: lightgrey">{{wine['name']}}</label></li>{% else: %}<li><label fontsize="20px">{{wine['name']}}</label></li>{% endif %}
+                <ul>
+                    <li>QUANTITY: {{wine['quantity']}}</li>
+                    <li>PRICE: {{wine['price']}}€</li>
+                </ul>
+        {% endfor %}
+            </ul>
+            <li>DOLCI:</li>
+            <ul>
+        {% for wine in sweet %}
+            {% if wine['quantity']==0: %}<li><label style="background-color: lightgrey">{{wine['name']}}</label></li>{% else: %}<li><label fontsize="20px">{{wine['name']}}</label></li>{% endif %}
+                <ul>
+                    <li>QUANTITY: {{wine['quantity']}}</li>
+                    <li>PRICE: {{wine['price']}}€</li>
+                </ul>
+        {% endfor %}
+            </ul>
+    </ul>
+    </body>
+</html>
